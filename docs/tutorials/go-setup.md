@@ -52,10 +52,17 @@ First verify Go installation using ```go version```.
 Now initialize the module using ```go mod```:
 ```
 go mod init hello-423
-
-# Verify setup
-go mod verify 
 ```
+
+???+ warning "Verify setup"
+    Use ```go mod verify``` to make sure the module was initialized. 
+
+???+ abstract "Project Structure"
+    A usual Go project includes
+
+    * ```main.go``` -- entry point
+    * ```go.mod``` -- dependencies
+    * ```README.md``` -- documentation
 
 ### 4. Write Hello-423
 In your project root, create a file called ```main.go``` and write the following in the file:
@@ -75,8 +82,13 @@ We can compile and run the program with two different strategies
 
 * Write ```go run main.go``` in the terminal to compile and run the program in one step. 
 
-* Use go build to compile the file (similar to ```gcc``` in COMP 211), then run the compiled file. Input each line as follows in the terminal.
+* Use go build to compile the file, then run the compiled file. Input each line as follows in the terminal.
 ```
 go build
 ./hello-423
 ```
+???+ info "Understanding the compilation step"
+    ```go build```: This command acts similarly to the ```gcc``` command that we used in COMP 211. ```gcc``` supports  a wide range of languages, including C and Go, but ```go build``` is designed specifically for Golang. ```go build``` is generally faster in compilation speed. 
+
+## Conclusion
+You've successfully created and run a program in Go!
